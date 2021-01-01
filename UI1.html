@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>UI1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=.5">
+  <link rel="stylesheet" type="text/css" href="sty.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  
+</head>
+
+<body>
+  <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="myphoto" alt="me" style="width:100%"></a>
+  <div class="wrapper">
+    <div id="flash2" class="grad2"></div>
+<script>
+  function openNav() {
+    if (window.matchMedia("(max-device-width: 480px)").matches) {
+      document.getElementById("navbar").style.opacity="1";
+      document.getElementById("navoverlay").style.opacity=".75";
+      document.getElementById("navbar").style.pointerEvents="auto";
+      document.getElementById("navoverlay").style.pointerEvents="auto";
+    } else {
+      document.getElementById("navbar").style.opacity="1";
+      document.getElementById("navoverlay").style.display="none";
+    }
+  }
+  function closeNav() {
+    if (window.matchMedia("(max-device-width: 480px)").matches) {
+      document.getElementById("navbar").style.opacity="0";
+      document.getElementById("navoverlay").style.opacity="0";
+      document.getElementById("navbar").style.pointerEvents="none";
+      document.getElementById("navoverlay").style.pointerEvents="none";
+    } else {
+      document.getElementById("navbar").style.opacity="1";
+      document.getElementById("navoverlay").style.display="none";
+    }
+  }
+
+</script>
+    <div class="bar">
+        <i class="fas fa-bars" onclick="openNav()"></i>
+        <div id="navbar">
+          <div class="navbutton" onclick="closeNav()">
+            <div class="nametag" style="flex:50%;"><a href="#about">About</a></div>
+          </div>
+          <div class="navbutton" onclick="closeNav()" style="width:9em;">
+            <div class="nametag" style="flex:50%;"><a href="#partners">CV</a></div>
+          </div>
+          <div class="navbutton" onclick="closeNav()" style="width:8.5em;">
+            <div class="nametag" style="flex:50%;"><a href="#contact">Contact</a></div>
+          </div>
+          <div class="navbutton" onclick="closeNav()">
+            <div class="nametag" style="flex:50%;"><a href="faq/faq.html">Feedback</a></div>
+          </div>
+          <div onclick="closeNav()" class="navbutton" id="closebutton">
+            <div style="flex:50%;padding-left:1.5em;"><p>close</p></div>
+          </div>
+      </div>
+    </div>
+    <div id="navoverlay" onclick="closeNav()"></div>
+
+    <div id="flash" class="grad"></div>
+
+    <div id="landingcontainer">
+      <div id="firsttrees">
+        <div class="firsttree rellax" data-rellax-speed="1">
+          <img src="foretree.png">
+        </div>
+        <div class="firsttree rellax" data-rellax-speed="-3">
+          <img src="backtree2.png">
+        </div>
+        <div class="firsttree rellax" data-rellax-speed="-2">
+          <img src="midtree.png">
+        </div>
+      </div>
+      <div id="landing">
+        <div class="futureimage">
+          <img style="width: 100%" src="sun.svg" alt="sun">
+        </div>
+        <div id="titlegroup">
+          <p>Name</p>
+        </div>
+      </div>
+    </div>
+<!--    <div id="parallax-group">
+      <div id="hill" class="parallax rellax" data-rellax-speed="-2" ></div>
+    </div>-->
+    <div id="about" >
+      <div class="block">
+        <div class="text">
+          <h2>a little about me</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+        </div>
+      </div>
+    </div>
+    <div id="rest" style="">
+    <div id="partners" >
+      <h2>CV</h2>
+    </div>
+
+    <div id="contact">
+      <div>
+        <h2>Email</h2>
+       
+        <div class="image">
+           <img src="telescope.png" />
+       </div>
+      </div>
+    </div>
+    <div class="decorativelines">
+      <div style="width: 100%;height:7px;"></div>
+      <div style="width: 30%;height:3px;"></div>
+    </div>
+    <div id="bottom">
+      <div id="socials">
+        <div class="socialcontainer">
+          <div class="social">
+            <a href="https://twitter.com/cuhackit?lang=en"><i class="fa fa-twitter" aria-hidden="false"></i></a>
+          </div>
+        </div>
+        <div class="socialcontainer">
+          <div class="social">
+            <a href="https://www.instagram.com/cuhackit/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="socialcontainer">
+          <div class="social">
+            <a href="https://www.facebook.com/CUhackers/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  </script>
+  <script>
+
+
+/*    window.addEventListener('scroll', function(e) {
+        var hill = document.querySelectorAll(".parallax");
+        var container = document.querySelector("#parallax-group");
+        var trees = document.querySelectorAll(".firsttree");
+
+        var scrolled = Math.ceil(window.pageYOffset / 15) * 15;
+        var rate = scrolled * .15;
+        var rate4 = scrolled * .25;
+        var rate2 = scrolled * -.15;
+        var rate3 = scrolled * -.75;
+
+
+          if (window.matchMedia("(max-device-width: 480px)").matches) {
+            hill[0].style.transform = 'translate3D(0px, '+rate+'px, 0px)';
+            hill[1].style.transform = 'none';
+            hill[2].style.transform = 'translate3D(0px, '+rate3+'px, 0px)';
+            container.style.transform = 'none';
+            trees[1].style.transform = 'translate3D(0px, '+rate4+'px, 0px)';
+            trees[2].style.transform = 'translate3D(0px, '+rate+'px, 0px)';
+          } else {
+            container.style.transform = 'translate3D(0px, '+rate4+'px, 0px)';
+
+            hill[0].style.transform = 'translate3D(0px, '+rate+'px, 0px)';
+            hill[1].style.transform = 'translate3D(0px, '+rate2+'px, 0px)';
+            hill[2].style.transform = 'translate3D(0px, '+rate3+'px, 0px)';
+
+            container.style.transform = 'translate3D(0px, '+rate+'px, 0px)';
+
+            trees[1].style.transform = 'translate3D(0px, '+rate4+'px, 0px)';
+            trees[2].style.transform = 'translate3D(0px, '+rate+'px, 0px)';
+          }
+    }); */
+
+
+    var rellax = new Rellax('.rellax', {
+    breakpoints:[480, 1000, 1201]
+  });
+
+
+
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+
+  </script>
+</body>
+
+</html>
